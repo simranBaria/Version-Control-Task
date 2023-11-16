@@ -7,12 +7,12 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = particles.size() - 1; i > 0; i--){
-    particles.get(i).update();
-    particles.get(i).display();
+  for (int j = particles.size() - 1; j > 0; j--){
+    particles.get(j).update();
+    particles.get(j).display();
     
     // Remove particle if off screen
-    if(particles.get(i).position.y > 400) particles.remove(particles.get(i));
+    if(particles.get(j).position.y > 400) particles.remove(particles.get(j));
   }
   if(mousePressed == true) {
     particles.add(new Particle(mouseX, mouseY));
